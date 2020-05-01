@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +16,7 @@
     <title>Home</title>
     <style>
       body {
-        background-image: url(imgs/bg.jpg);
+       
       }
     </style>
   </head>
@@ -42,5 +43,41 @@
         Members
       </h1>
     </div>
+    <a href="memberform.php" class="btn btn-dark" role="button">New Button</a>
+
+    <div>
+    <table class="table table-dark">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">DATE_OF_JOINING</th>
+    </tr>
+    </thead>
+  <?php 
+
+// connect to database
+  $conn = mysqli_connect('localhost', 'root', '', 'Library');
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    }
+  $sql = "SELECT SSN, FNAME, LNAME, DATE_OF_JOINING FROM `members`";
+  
+  $result = $conn->query($sql);
+if ($result->num_rows > 0) {
+// output data of each row
+while($row = $result->fetch_assoc()) {
+echo "<tr><td>" . $row["SSN"]. "</td><td>" . $row["FNAME"] . "</td><td>"
+. $row["LNAME"]. "</td><td>" . $row["DATE_OF_JOINING"] . "</td></tr>";
+}
+echo "</table>";
+} else { echo "0 results"; }
+$conn->close();
+?>    
+      
+
+    </div>
+    
   </body>
 </html>

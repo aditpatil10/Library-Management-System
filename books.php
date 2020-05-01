@@ -1,3 +1,9 @@
+<?php 
+
+// connect to database
+$db = mysqli_connect('localhost', 'root', '', 'Library');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +21,7 @@
     <title>Home</title>
     <style>
       body {
-        background-image: url(imgs/bg.jpg);
+        
       }
     </style>
   </head>
@@ -41,6 +47,42 @@
       >
         Books
       </h1>
+      <a href="memberform.php" class="btn btn-dark" role="button">Add new book</a>
+
+    <div>
+    <table class="table table-dark">
+    <thead>
+    <tr>
+      <th scope="col">ISBN</th>
+      <th scope="col">Title</th>
+      <th scope="col">Subject Area</th>
+      <th scope="col">Author</th>
+    </tr>
+    </thead>
+  <?php 
+
+// connect to database
+  $conn = mysqli_connect('localhost', 'root', '', 'Library');
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    }
+  $sql = "SELECT ISBN, TITLE, SUBJECT_AREA, AUTHOR FROM `books`";
+  
+  $result = $conn->query($sql);
+if ($result->num_rows > 0) {
+// output data of each row
+while($row = $result->fetch_assoc()) {
+echo "<tr><td>" . $row["ISBN"]. "</td><td>" . $row["TITLE"] . "</td><td>"
+. $row["SUBJECT_AREA"]. "</td><td>" . $row["AUTHOR"] . "</td></tr>";
+}
+echo "</table>";
+} else { echo "0 results"; }
+$conn->close();
+?>    
+      
+
+    </div>
+    
     </div>
   </body>
 </html>
