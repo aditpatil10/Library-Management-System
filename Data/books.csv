@@ -1,0 +1,16 @@
+﻿ISBN,BOOK_ID,EDITION,SUBJECT_AREA,TITLE,LENDABLE,AUTHOR
+12345678901,1,3,Mathematics,Applied Mathematics-I,1,G.Khumbhojkar
+98765432101,2,5,Programming,Reinforcement Learning,0,Richard S Sutton
+30920288291,3,5,Science Fiction,The Hitchhiker's Guide to the Galaxy,1,Douglas Adams
+14974539935,4,3,Non-Fiction,Steve Jobs,0,Walter Issacson
+90069909161,5,4,Literature,The Tale of two Cities,1,Charles Dickens
+10998213313,6,3,Non-Fiction,The Dairy of a Young Girl,1,Anne Frank
+27931229109,7,2,Programming,Fundamentals of Database Systems,1,Ramez Elmasri
+12063390540,8,4,Fiction,Harry Potter and the Philsopher's Stone,1,J.K Rowling
+50680991225,9,2,Non-Fiction,How to Win Friends and Influence People,0,Dale Carnegie
+97743045345,10,3,Literature,Treasure Island,0,Robert Louis Stevenson
+18533792071,11,4,Fiction,Harry Potter and the Chamber of Secrets,0,J.K Rowling
+87927505544,12,3,Non-Fiction,Mamba Mentality,1,Kobe Bryant
+33226486961,13,3,Programming,Neural Network Design,0,Hagan
+22096364365,14,4,Literature,The Adventures of Tom Sawyer,1,Mark Twain
+35270756718,15,3,Science Fiction,Dune,0,Frank Herbert

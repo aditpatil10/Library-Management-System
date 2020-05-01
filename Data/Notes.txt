@@ -1,0 +1,7 @@
+Grace Period differs for Students & Professors
+
+- For Students
+	Checkout time(3 weeks) + Grace Period(1 week)
+
+- For Professors
+	Checkout time(3 months = 90 days) + Grace Period (2 weeks)	
