@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 01, 2020 at 07:49 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.2
+-- Host: localhost
+-- Generation Time: May 02, 2020 at 08:42 AM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `library`
+-- Database: `Library`
 --
 
 -- --------------------------------------------------------
@@ -57,7 +57,9 @@ INSERT INTO `books` (`ISBN`, `BOOK_ID`, `EDITION`, `SUBJECT_AREA`, `TITLE`, `LEN
 (87927505544, 12, 3, 'Non-Fiction', 'Mamba Mentality', 1, 'Kobe Bryant'),
 (33226486961, 13, 3, 'Programming', 'Neural Network Design', 0, 'Hagan'),
 (22096364365, 14, 4, 'Literature', 'The Adventures of Tom Sawyer', 1, 'Mark Twain'),
-(35270756718, 15, 3, 'Science Fiction', 'Dune', 0, 'Frank Herbert');
+(35270756718, 15, 3, 'Science Fiction', 'Dune', 0, 'Frank Herbert'),
+(12345678901, 16, 234, '235sdgfsdg', 'sdgsdg', 1, 'sfdghdfbh'),
+(96385274102, 17, 3, 'Fiction', 'Life of Pi', 1, 'Pi');
 
 -- --------------------------------------------------------
 
@@ -116,6 +118,7 @@ INSERT INTO `catalog` (`Isbn`, `SSN`, `TITLE`, `DESCRIPTION`, `SUBJECT_AREA`) VA
 (50680991225, 213535704, 'How to Win Friends and Influence People', 'abcd', 'Non-Fiction'),
 (87927505544, 213535704, 'Mamba Mentality', 'abcd', 'Non-Fiction'),
 (90069909161, 213535704, 'The Tale of two Cities', 'abcd', 'Literature'),
+(96385274102, 213535704, 'Life of Pi', '1111', 'Fiction'),
 (97743045345, 213535704, 'Treasure Island', 'abcd', 'Literature'),
 (98765432101, 213535704, 'Reinforcement Learning', 'abcd', 'Programming');
 
@@ -139,22 +142,17 @@ CREATE TABLE `librarians` (
 INSERT INTO `librarians` (`SSN`, `NAME`, `LIBRARIAN_TYPE`, `Phone_NO.`) VALUES
 (155281869, 'Jorie Franek', 2, 8321547364),
 (213535704, 'Lynnell Cowper', 5, 2912060410),
-(216818897, 'Charisse Duiged', 5, 3377525517),
 (225463109, 'Iggy McLelland', 4, 2613723716),
-(289286592, 'Waylon Gosker', 5, 4172381713),
 (360634758, 'Glyn More', 4, 6256458599),
 (449502580, 'Gianina Benoey', 3, 3972552223),
 (474072792, 'Kristan Sowray', 3, 5956061990),
 (510550817, 'Farrell Doorbar', 1, 6201926085),
 (599451697, 'Tammie Offill', 1, 6501232211),
 (647510432, 'Carolee Barrass', 2, 9785647898),
-(691515026, 'Zaccaria Brakespear', 5, 3201019994),
 (708483095, 'Corri Vasilchenko', 1, 9506525403),
 (759762980, 'Morten Danks', 1, 4998960967),
-(768824090, 'Evelin McWhin', 5, 7133076077),
 (775114634, 'Almeda Hanner', 4, 8784300209),
 (785522354, 'Olia Damiral', 1, 6677375476),
-(785644701, 'Tiertza Babber', 5, 5739855802),
 (855875642, 'Brynne Devlin', 4, 2867031117),
 (890687421, 'Beatrice Culcheth', 2, 5957743686);
 
@@ -304,6 +302,7 @@ ALTER TABLE `books`
 -- Indexes for table `borrows`
 --
 ALTER TABLE `borrows`
+  ADD UNIQUE KEY `BOOK_ID_2` (`BOOK_ID`),
   ADD KEY `SSN` (`SSN`),
   ADD KEY `ISBN` (`ISBN`),
   ADD KEY `BOOK_ID` (`BOOK_ID`);
@@ -345,9 +344,20 @@ ALTER TABLE `members_type`
 -- Indexes for table `returns`
 --
 ALTER TABLE `returns`
+  ADD UNIQUE KEY `BOOK_ID_2` (`BOOK_ID`),
   ADD KEY `ISBN` (`ISBN`),
-  ADD KEY `BOOK_ID` (`BOOK_ID`),
-  ADD KEY `SSN` (`SSN`);
+  ADD KEY `SSN` (`SSN`),
+  ADD KEY `BOOK_ID` (`BOOK_ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `books`
+--
+ALTER TABLE `books`
+  MODIFY `BOOK_ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Constraints for dumped tables
@@ -364,8 +374,8 @@ ALTER TABLE `books`
 --
 ALTER TABLE `borrows`
   ADD CONSTRAINT `borrows_ibfk_1` FOREIGN KEY (`SSN`) REFERENCES `members` (`SSN`),
-  ADD CONSTRAINT `borrows_ibfk_2` FOREIGN KEY (`BOOK_ID`) REFERENCES `books` (`BOOK_ID`),
-  ADD CONSTRAINT `borrows_ibfk_3` FOREIGN KEY (`ISBN`) REFERENCES `catalog` (`Isbn`);
+  ADD CONSTRAINT `borrows_ibfk_3` FOREIGN KEY (`ISBN`) REFERENCES `catalog` (`Isbn`),
+  ADD CONSTRAINT `borrows_ibfk_4` FOREIGN KEY (`BOOK_ID`) REFERENCES `books` (`BOOK_ID`);
 
 --
 -- Constraints for table `catalog`
@@ -389,9 +399,9 @@ ALTER TABLE `members`
 -- Constraints for table `returns`
 --
 ALTER TABLE `returns`
-  ADD CONSTRAINT `returns_ibfk_1` FOREIGN KEY (`BOOK_ID`) REFERENCES `books` (`BOOK_ID`),
   ADD CONSTRAINT `returns_ibfk_2` FOREIGN KEY (`ISBN`) REFERENCES `catalog` (`Isbn`),
-  ADD CONSTRAINT `returns_ibfk_3` FOREIGN KEY (`SSN`) REFERENCES `members` (`SSN`);
+  ADD CONSTRAINT `returns_ibfk_3` FOREIGN KEY (`SSN`) REFERENCES `members` (`SSN`),
+  ADD CONSTRAINT `returns_ibfk_4` FOREIGN KEY (`BOOK_ID`) REFERENCES `books` (`BOOK_ID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

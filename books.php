@@ -47,7 +47,7 @@ $db = mysqli_connect('localhost', 'root', '', 'Library');
       >
         Books
       </h1>
-      <a href="memberform.php" class="btn btn-dark" role="button">Add new book</a>
+      <a href="booksform.php" class="btn btn-dark" role="button">Add new book</a>
 
     <div>
     <table class="table table-dark">
