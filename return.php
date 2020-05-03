@@ -17,6 +17,7 @@ $db = mysqli_connect('localhost', 'root', '', 'Library');
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
 
     <title>Home</title>
     <style>
@@ -43,7 +44,7 @@ $db = mysqli_connect('localhost', 'root', '', 'Library');
     </nav>
     <div>
       <h1
-        style="text-align: center; background: rgba(0, 0, 0, 0.4); color: azure"
+        style="text-align: center; font-family: 'Merriweather', serif;"
       >
         Return
       </h1>

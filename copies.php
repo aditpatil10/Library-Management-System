@@ -17,6 +17,7 @@ $db = mysqli_connect('localhost', 'root', '', 'Library');
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
 
     <title>Report</title>
     <style>
@@ -41,7 +42,7 @@ $db = mysqli_connect('localhost', 'root', '', 'Library');
       </div>
     </nav>
     <div>
-      <h1 style="text-align: center"> Weekly Report </h1>
+      <h1 style="text-align: center; font-family: 'Merriweather', serif;"> Weekly Report </h1>
 <div>
 <table class="table table-dark">
 <thead>
