@@ -36,10 +36,10 @@ if ($conn->connect_error) {
     <label for="exampleInputEmail1" class="bmd-label-floating">ISBN</label>
     <input type="number" class="form-control" id="isbn" name= "isbn">
   </div>
-  <div class="form-group">
+  <!-- <div class="form-group">
     <label for="exampleInputEmail1" class="bmd-label-floating">BOOK ID</label>
     <input type="number" class="form-control" id="fname" name= "bookid">
-  </div>
+  </div> -->
   <div class="form-group">
     <label for="exampleInputEmail1" class="bmd-label-floating">Edition</label>
     <input type="text" class="form-control" id="mname" name= "edition">

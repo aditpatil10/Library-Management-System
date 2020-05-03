@@ -16,8 +16,9 @@ if(isset($_POST['submit']))
      $isactive = $_POST['isactive'];
      $dateofjoining = $_POST['dateofjoining'];
      $memtype = $_POST['memtype'];
+     $NewDate = Date('y-m-d', strtotime('+1460 days'));
  
-     $sql = "INSERT INTO `members` (`SSN`, `FNAME`, `MNAME`, `LNAME`, `PHONE`, `HOME_MAILING ADDRESS`, `CAMPUS_ADDRESS`, `IS_ACTIVE`, `DATE_OF_JOINING`, `MEMBER_TYPE`) VALUES ('$ssn', '$fname', '$mname', '$lname', '$phone', '$home', '$campus', '$isactive', '$dateofjoining', '$memtype');";
+     $sql = "INSERT INTO `members` (`SSN`, `FNAME`, `MNAME`, `LNAME`, `PHONE`, `HOME_MAILING ADDRESS`, `CAMPUS_ADDRESS`, `IS_ACTIVE`, `DATE_OF_JOINING`, `MEMBERSHIP_EXPIRY`, `MEMBER_TYPE`) VALUES ('$ssn', '$fname', '$mname', '$lname', '$phone', '$home', '$campus', '$isactive', '$dateofjoining', '$NewDate', '$memtype');";
  
      if (mysqli_query($conn, $sql)) {
         echo "New record has been added successfully !";

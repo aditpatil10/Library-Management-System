@@ -51,7 +51,7 @@
     <input type="text" class="form-control" id="caddress" name= "caddress">
   </div>
   <div class="form-group">
-    <label for="exampleInputEmail1" class="bmd-label-floating">Date of joining</label>
+    <label for="exampleInputEmail1" class="bmd-label-floating">Date of joining yyyy-mm-dd</label>
     <input type="text" class="form-control" id="date" name= "dateofjoining">
   </div>
   <div class="form-group">
