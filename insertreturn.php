@@ -56,6 +56,11 @@ if(isset($_POST['submit']))
 
         $sql3 = "UPDATE `books` SET `LENDABLE` = '1' WHERE `books`.`BOOK_ID` = $bookid;";
         mysqli_query($conn, $sql3);
+
+        $returnn = "UPDATE `borrows` SET `RETURN_STATUS`= 1 WHERE BOOK_ID = $bookid AND ISBN = $row[0];";
+        mysqli_query($conn, $returnn);
+        $overdue = "UPDATE `borrows` SET `OVERDUE_STATUS`=' '";
+        mysqli_query($conn, $overdue);
        } else {
          echo "Error: " . $sql . ":-" . mysqli_error($conn);
            }

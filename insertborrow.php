@@ -11,7 +11,8 @@ if(isset($_POST['submit']))
      $date = date('Y-m-d');
 
 
- 
+     $trig = "UPDATE borrows SET OVERDUE_STATUS = '';";
+     mysqli_query($conn, $trig);
      $sql1 = "SELECT ISBN FROM `books` WHERE BOOK_ID = $bookid;";
      $sql2 = "SELECT MEMBER_TYPE FROM `members` WHERE SSN = $ssn;";
 

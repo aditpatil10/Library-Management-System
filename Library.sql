@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 03, 2020 at 07:14 AM
+-- Generation Time: May 03, 2020 at 12:59 PM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.10
 
@@ -54,12 +54,34 @@ INSERT INTO `books` (`ISBN`, `BOOK_ID`, `EDITION`, `SUBJECT_AREA`, `TITLE`, `LEN
 (50680991225, 9, 2, 'Non-Fiction', 'How to Win Friends and Influence People', 0, 'Dale Carnegie'),
 (97743045345, 10, 3, 'Literature', 'Treasure Island', 0, 'Robert Louis Stevenson'),
 (18533792071, 11, 4, 'Fiction', 'Harry Potter and the Chamber of Secrets', 0, 'J.K Rowling'),
-(87927505544, 12, 3, 'Non-Fiction', 'Mamba Mentality', 1, 'Kobe Bryant'),
+(87927505544, 12, 3, 'Non-Fiction', 'Mamba Mentality', 0, 'Kobe Bryant'),
 (33226486961, 13, 3, 'Programming', 'Neural Network Design', 0, 'Hagan'),
 (22096364365, 14, 4, 'Literature', 'The Adventures of Tom Sawyer', 1, 'Mark Twain'),
 (35270756718, 15, 3, 'Science Fiction', 'Dune', 0, 'Frank Herbert'),
 (12345678901, 16, 234, '235sdgfsdg', 'sdgsdg', 1, 'sfdghdfbh'),
-(96385274102, 17, 3, 'Fiction', 'Life of Pi', 1, 'Pi');
+(96385274102, 17, 3, 'Fiction', 'Life of Pi', 1, 'Pi'),
+(69493902479, 20, 1, 'Literature', 'Ulysses', 1, 'James Joyce'),
+(77614910635, 21, 4, 'Science Fiction', 'Jurassic Park', 1, 'Michael Chrichton'),
+(23945493696, 22, 4, 'Fiction', 'Wool', 1, 'Hugh Howey'),
+(49163453748, 23, 1, 'Science Fiction', 'Frankenstein', 1, 'Mary Shelley'),
+(76660995554, 24, 3, 'Literature', 'The Illaid', 0, 'Homer'),
+(38425519962, 25, 1, 'Science Fiction', 'Foundation', 0, 'Isaac Asimov'),
+(82608175688, 26, 4, 'Literature', 'Don Quixote', 1, 'Miguel de Cervantes'),
+(67047678276, 27, 3, 'Literature', 'The Great Gatsby', 0, 'F. Scott Fitzgerald'),
+(61595403446, 28, 1, 'Non-Fiction', 'When Breath Becomes Air', 0, 'Paul Kalanithi'),
+(56118942707, 29, 2, 'Programming', 'CLEAN CODE: A HANDBOOK OF AGILE SOFTWARE CRAFTSMANSHIP', 0, 'Robert C. Martin'),
+(68027409809, 30, 2, 'Non-Fiction', 'A Brief History of Time', 1, 'Stephen Hawking'),
+(30774107178, 31, 3, 'Literature', 'Catch-22', 1, 'Joseph Heller'),
+(51895206346, 32, 3, 'Non-Fiction', 'Sapiens: A Brief History of Humankind', 0, 'Yuval Noah Harari'),
+(75645730061, 33, 1, 'Non-Fiction', 'Surely You’re Joking, Mr. Feynman!', 0, 'Richard P. Feynman'),
+(77418583213, 34, 1, 'Programming', 'INTRODUCTION TO ALGORITHMS', 0, 'Thomas H. Cormen'),
+(52164525743, 35, 2, 'Literature', 'One Hundred Years of Solitude', 1, 'Gabriel Garcia Marquez'),
+(27260506091, 36, 4, 'Fiction', 'Outlander', 0, 'Diana Gabaldon'),
+(20585409442, 37, 2, 'Fiction', 'Wonder', 0, 'R. J. Palacio'),
+(91820234170, 38, 4, 'Programming', 'WORKING EFFECTIVELY WITH LEGACY CODE', 0, 'Michael Feathers'),
+(77012553153, 39, 1, 'Non-Fiction', 'Manual for Living', 0, 'Epictetus'),
+(25974233867, 40, 3, 'Programming', 'HEAD FIRST JAVA', 0, 'Kathy Sierra'),
+(85269652460, 41, 4, 'Science Fiction', 'Solaris', 1, 'Stanislaw Lem');
 
 -- --------------------------------------------------------
 
@@ -72,19 +94,34 @@ CREATE TABLE `borrows` (
   `BOOK_ID` bigint(20) DEFAULT NULL,
   `SSN` bigint(20) DEFAULT NULL,
   `ISSUE_DATE` date DEFAULT NULL,
-  `GRACE_PERIOD` date DEFAULT NULL
+  `GRACE_PERIOD` date DEFAULT NULL,
+  `OVERDUE_STATUS` text DEFAULT NULL,
+  `RETURN_STATUS` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `borrows`
 --
 
-INSERT INTO `borrows` (`ISBN`, `BOOK_ID`, `SSN`, `ISSUE_DATE`, `GRACE_PERIOD`) VALUES
-(30920288291, 3, 411726343, '2018-01-20', '2018-02-17'),
-(14974539935, 4, 966826841, '2018-01-12', '2018-04-26'),
-(90069909161, 5, 351475268, '2018-03-26', '2018-04-23'),
-(10998213313, 6, 860693966, '2018-04-26', '2018-05-24'),
-(27931229109, 7, 381596986, '2018-09-02', '2018-09-30');
+INSERT INTO `borrows` (`ISBN`, `BOOK_ID`, `SSN`, `ISSUE_DATE`, `GRACE_PERIOD`, `OVERDUE_STATUS`, `RETURN_STATUS`) VALUES
+(30920288291, 3, 411726343, '2018-01-20', '2018-02-17', 'Your Return is overdue!', 0),
+(14974539935, 4, 966826841, '2018-01-12', '2018-04-26', 'Your Return is overdue!', 0),
+(90069909161, 5, 351475268, '2018-03-26', '2018-04-23', 'Your Return is overdue!', 0),
+(10998213313, 6, 860693966, '2018-04-26', '2018-05-24', 'Your Return is overdue!', 0),
+(27931229109, 7, 381596986, '2018-09-02', '2018-09-30', 'Your Return is overdue!', 0),
+(22096364365, 14, 527295112, '2020-05-03', '2020-05-31', ' ', 1),
+(87927505544, 12, 527295112, '2020-05-03', '2020-05-31', ' ', 0),
+(23945493696, 22, 905360861, '2018-01-10', '2018-02-07', NULL, 0);
+
+--
+-- Triggers `borrows`
+--
+DELIMITER $$
+CREATE TRIGGER `overdue` BEFORE UPDATE ON `borrows` FOR EACH ROW IF NEW.GRACE_PERIOD < NOW() THEN
+      SET NEW.OVERDUE_STATUS = "Your Return is overdue!";    
+END IF
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -227,8 +264,8 @@ CREATE TABLE `members` (
 --
 
 INSERT INTO `members` (`SSN`, `FNAME`, `MNAME`, `LNAME`, `PHONE`, `HOME_MAILING ADDRESS`, `CAMPUS_ADDRESS`, `IS_ACTIVE`, `DATE_OF_JOINING`, `MEMBERSHIP_EXPIRY`, `MEMBER_TYPE`, `COMMENTS`) VALUES
-(351475268, 'Sisely', 'K', 'Thirlwall', 4374591441, '588 Butterfield Pass', '85051 Elgar Drive', 1, '1992-08-07', '2024-05-01', 0, NULL),
-(381596986, 'Jdavie', 'X', 'Mulheron', 1331319795, '3 American Ash Center', '65 Milwaukee Junction', 1, '2016-10-29', '2020-07-07', 0, NULL),
+(351475268, 'Sisely', 'K', 'Thirlwall', 4374591441, '588 Butterfield Pass', '85051 Elgar Drive', 1, '1992-08-07', '2024-05-02', 0, NULL),
+(381596986, 'Jdavie', 'X', 'Mulheron', 1331319795, '3 American Ash Center', '65 Milwaukee Junction', 1, '2016-10-29', '2024-05-02', 0, NULL),
 (411726343, 'Sella', 'I', 'Ashpital', 5352450062, '81363 Hazelcrest Crossing', '84 Burrows Crossing', 1, '2001-08-25', '2020-08-07', 0, NULL),
 (466947778, 'Mathian', 'T', 'Davidsohn', 6989940088, '7 Crescent Oaks Pass', '3 Troy Crossing', 1, '2004-04-19', '2020-09-07', 1, NULL),
 (487534189, 'Philippine', 'G', 'Carss', 9033284088, '24582 Kim Crossing', '1091 Gerald Alley', 0, '1993-12-20', '2020-10-07', 1, NULL),
@@ -256,6 +293,16 @@ INSERT INTO `members` (`SSN`, `FNAME`, `MNAME`, `LNAME`, `PHONE`, `HOME_MAILING 
 (966826841, 'Mariel', 'J', 'Kiefer', 3424955280, '75 Fallview Place', '1 Coleman Center', 1, '1992-05-24', '2020-07-27', 1, NULL),
 (975730668, 'Tonye', 'S', 'Jeggo', 7894872199, '54139 Hoard Parkway', '02 Doe Crossing Circle', 0, '1996-12-10', '2020-08-27', 1, NULL),
 (990483425, 'Lexy', 'W', 'Geard', 8029149648, '2217 Hermina Junction', '88 Manley Circle', 1, '2015-11-26', '2020-09-27', 1, NULL);
+
+--
+-- Triggers `members`
+--
+DELIMITER $$
+CREATE TRIGGER `memrenew` BEFORE UPDATE ON `members` FOR EACH ROW IF NEW.MEMBERSHIP_EXPIRY > NOW() THEN
+      SET NEW.COMMENTS = "Your Subscription has been renewed for 4 years.";
+END IF
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -300,7 +347,10 @@ INSERT INTO `returns` (`Recipt_no`, `ISBN`, `BOOK_ID`, `SSN`, `Return_date`) VAL
 (3, 90069909161, 5, 351475268, '2018-04-12'),
 (4, 10998213313, 6, 860693966, '2018-05-20'),
 (5, 27931229109, 7, 381596986, '2018-09-28'),
-(17, 14974539935, 4, 966826841, '2020-05-03');
+(17, 14974539935, 4, 966826841, '2020-05-03'),
+(18, 22096364365, 14, 527295112, '2020-05-03'),
+(19, 22096364365, 14, 527295112, '2020-05-03'),
+(20, 23945493696, 22, 905360861, '2018-01-30');
 
 --
 -- Indexes for dumped tables
@@ -372,13 +422,13 @@ ALTER TABLE `returns`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `BOOK_ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `BOOK_ID` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `returns`
 --
 ALTER TABLE `returns`
-  MODIFY `Recipt_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `Recipt_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Constraints for dumped tables
