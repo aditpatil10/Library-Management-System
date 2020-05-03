@@ -1,0 +1,260 @@
+MariaDB [library]> SELECT "Members Table" as Title; SELECT * FROM MEMBERS
++---------------+
+| Title         |
++---------------+
+| Members Table |
++---------------+
+1 row in set (0.000 sec)
+
+    -> ;
++-----------+-------------+-------+------------+------------+----------------------------+----------------------------+-----------+-----------------+-------------------+-------------+----------+
+| SSN       | FNAME       | MNAME | LNAME      | PHONE      | HOME_MAILING ADDRESS       | CAMPUS_ADDRESS             | IS_ACTIVE | DATE_OF_JOINING | MEMBERSHIP_EXPIRY | MEMBER_TYPE | COMMENTS |
++-----------+-------------+-------+------------+------------+----------------------------+----------------------------+-----------+-----------------+-------------------+-------------+----------+
+| 351475268 | Sisely      | K     | Thirlwall  | 4374591441 | 588 Butterfield Pass       | 85051 Elgar Drive          |         1 | 1992-08-07      | 2024-05-02        |           0 | NULL     |
+| 381596986 | Jdavie      | X     | Mulheron   | 1331319795 | 3 American Ash Center      | 65 Milwaukee Junction      |         1 | 2016-10-29      | 2024-05-02        |           0 | NULL     |
+| 411726343 | Sella       | I     | Ashpital   | 5352450062 | 81363 Hazelcrest Crossing  | 84 Burrows Crossing        |         1 | 2001-08-25      | 2020-08-07        |           0 | NULL     |
+| 466947778 | Mathian     | T     | Davidsohn  | 6989940088 | 7 Crescent Oaks Pass       | 3 Troy Crossing            |         1 | 2004-04-19      | 2020-09-07        |           1 | NULL     |
+| 487534189 | Philippine  | G     | Carss      | 9033284088 | 24582 Kim Crossing         | 1091 Gerald Alley          |         0 | 1993-12-20      | 2020-10-07        |           1 | NULL     |
+| 502838902 | Odele       | L     | Lanham     | 7666906720 | 15072 Dottie Avenue        | 74 Jay Hill                |         1 | 2014-07-26      | 2020-11-07        |           0 | NULL     |
+| 518201102 | Dirk        | P     | Lindro     | 4665687098 | 21350 Moulton Avenue       | 63975 Rutledge Drive       |         1 | 2008-12-26      | 2020-12-07        |           0 | NULL     |
+| 527295112 | Cosimo      | D     | Snartt     | 5361477027 | 1526 Independence Way      | 69 Aberg Crossing          |         1 | 1992-03-27      | 2020-01-02        |           0 | NULL     |
+| 550473765 | Ernst       | P     | Capozzi    | 6163307748 | 94 Fair Oaks Parkway       | 39788 Onsgard Pass         |         1 | 2008-09-23      | 2020-02-02        |           1 | NULL     |
+| 596621494 | Diana       | Y     | Walworth   | 9327400222 | 12499 Fisk Hill            | 91 Bunting Parkway         |         0 | 1998-01-16      | 2020-02-02        |           0 | NULL     |
+| 642188827 | Cassi       | C     | Fairbard   | 5783558417 | 0 New Castle Drive         | 4 Graceland Avenue         |         0 | 2008-03-04      | 2020-03-02        |           1 | NULL     |
+| 643252660 | Hillary     | M     | Woofinden  | 4609086056 | 35446 Marquette Crossing   | 79 Shasta Place            |         0 | 1993-07-15      | 2020-04-02        |           1 | NULL     |
+| 667761714 | Tobit       | Y     | Snawdon    | 3493927088 | 7 Killdeer Way             | 9279 Little Fleur Terrace  |         0 | 1999-09-11      | 2020-05-02        |           0 | NULL     |
+| 696721702 | Alie        | V     | Jehan      | 6601088860 | 85337 Meadow Valley Avenue | 2 Boyd Hill                |         0 | 1995-07-30      | 2020-06-02        |           1 | NULL     |
+| 705694312 | Chelsy      | H     | Spellecy   | 5923156478 | 814 Cherokee Point         | 829 Meadow Valley Junction |         0 | 2010-04-07      | 2020-07-02        |           0 | NULL     |
+| 732820010 | Konstantine | V     | Artist     | 3965968657 | 91 Melody Crossing         | 3 Bluestem Way             |         0 | 2017-01-17      | 2020-08-02        |           0 | NULL     |
+| 758419097 | Nonah       | N     | Ponton     | 8504296600 | 72 Calypso Plaza           | 88 Mockingbird Alley       |         0 | 2018-01-05      | 2020-09-02        |           0 | NULL     |
+| 790220195 | Ema         | N     | Donn       | 9324369010 | 3731 Elka Hill             | 9727 Golf Course Drive     |         1 | 2016-11-01      | 2020-10-02        |           0 | NULL     |
+| 799003369 | Russ        | J     | Feldmus    | 1471581983 | 13480 Manufacturers Road   | 97246 Donald Parkway       |         0 | 2017-05-19      | 2020-11-02        |           0 | NULL     |
+| 806957816 | Lotta       | F     | Cockarill  | 4483996789 | 27 Manley Junction         | 342 Blaine Crossing        |         1 | 2000-08-02      | 2020-12-02        |           0 | NULL     |
+| 860693966 | Gavra       | S     | Cars       | 7133728527 | 0546 Butternut Lane        | 1334 Lerdahl Parkway       |         1 | 2020-04-06      | 2020-01-27        |           0 | NULL     |
+| 864651125 | Bartolemo   | O     | Westbury   | 3207699481 | 076 Reinke Pass            | 00726 Manufacturers Lane   |         1 | 1997-10-09      | 2020-02-27        |           0 | NULL     |
+| 883488595 | Tatiania    | Y     | Iacofo     | 8241061769 | 26196 Dovetail Court       | 0 Onsgard Avenue           |         0 | 1990-10-09      | 2020-03-27        |           0 | NULL     |
+| 905360861 | Ogdan       | P     | Ambrosetti | 5038601958 | 65674 Waxwing Terrace      | 89 Division Point          |         1 | 2016-12-21      | 2020-04-27        |           1 | NULL     |
+| 910066118 | Nelie       | Z     | Magrane    | 5035195906 | 90675 Dovetail Place       | 8878 Fuller Crossing       |         0 | 2004-07-30      | 2020-05-27        |           0 | NULL     |
+| 945973828 | Elise       | D     | Marchiso   | 6384633547 | 8740 Brown Drive           | 279 Surrey Avenue          |         0 | 2006-09-23      | 2020-06-27        |           0 | NULL     |
+| 966826841 | Mariel      | J     | Kiefer     | 3424955280 | 75 Fallview Place          | 1 Coleman Center           |         1 | 1992-05-24      | 2020-07-27        |           1 | NULL     |
+| 975730668 | Tonye       | S     | Jeggo      | 7894872199 | 54139 Hoard Parkway        | 02 Doe Crossing Circle     |         0 | 1996-12-10      | 2020-08-27        |           1 | NULL     |
+| 990483425 | Lexy        | W     | Geard      | 8029149648 | 2217 Hermina Junction      | 88 Manley Circle           |         1 | 2015-11-26      | 2020-09-27        |           1 | NULL     |
++-----------+-------------+-------+------------+------------+----------------------------+----------------------------+-----------+-----------------+-------------------+-------------+----------+
+29 rows in set (0.000 sec)
+
+MariaDB [library]> SELECT "Member Type Table" as Title; SELECT * FROM MEMBERS_TYPE;
++-------------------+
+| Title             |
++-------------------+
+| Member Type Table |
++-------------------+
+1 row in set (0.000 sec)
+
++-----------+-----------+
+| Member_ID | Type      |
++-----------+-----------+
+|         0 | Student   |
+|         1 | Professor |
++-----------+-----------+
+2 rows in set (0.000 sec)
+
+MariaDB [library]> SELECT "Librarians Table" as Title; SELECT * FROM LIBRARIANS;
++------------------+
+| Title            |
++------------------+
+| Librarians Table |
++------------------+
+1 row in set (0.000 sec)
+
++-----------+-------------------+----------------+------------+
+| SSN       | NAME              | LIBRARIAN_TYPE | Phone_NO.  |
++-----------+-------------------+----------------+------------+
+| 155281869 | Jorie Franek      |              2 | 8321547364 |
+| 213535704 | Lynnell Cowper    |              5 | 2912060410 |
+| 225463109 | Iggy McLelland    |              4 | 2613723716 |
+| 360634758 | Glyn More         |              4 | 6256458599 |
+| 449502580 | Gianina Benoey    |              3 | 3972552223 |
+| 474072792 | Kristan Sowray    |              3 | 5956061990 |
+| 510550817 | Farrell Doorbar   |              1 | 6201926085 |
+| 599451697 | Tammie Offill     |              1 | 6501232211 |
+| 647510432 | Carolee Barrass   |              2 | 9785647898 |
+| 708483095 | Corri Vasilchenko |              1 | 9506525403 |
+| 759762980 | Morten Danks      |              1 | 4998960967 |
+| 775114634 | Almeda Hanner     |              4 | 8784300209 |
+| 785522354 | Olia Damiral      |              1 | 6677375476 |
+| 855875642 | Brynne Devlin     |              4 | 2867031117 |
+| 890687421 | Beatrice Culcheth |              2 | 5957743686 |
++-----------+-------------------+----------------+------------+
+15 rows in set (0.000 sec)
+
+MariaDB [library]> SELECT "Librarian Type Table" as Title; SELECT * FROM LIBRARIANS_TYPE;
++----------------------+
+| Title                |
++----------------------+
+| Librarian Type Table |
++----------------------+
+1 row in set (0.000 sec)
+
++--------+---------------------------------+
+| Lib_id | Designation                     |
++--------+---------------------------------+
+|      1 | Department Associate Librarians |
+|      2 | Chief Librarian                 |
+|      3 | Checkout Staff                  |
+|      4 | Library Assistants              |
+|      5 | Reference Librarians            |
++--------+---------------------------------+
+5 rows in set (0.000 sec)
+
+MariaDB [library]> SELECT "Catalog Table" as Title; SELECT * FROM CATALOG;
++---------------+
+| Title         |
++---------------+
+| Catalog Table |
++---------------+
+1 row in set (0.000 sec)
+
++-------------+-----------+---------------------------------------------------------+-------------+-----------------+
+| Isbn        | SSN       | TITLE                                                   | DESCRIPTION | SUBJECT_AREA    |
++-------------+-----------+---------------------------------------------------------+-------------+-----------------+
+| 10998213313 | 213535704 | The Dairy of a Young Girl                               | abcd        | Non-Fiction     |
+| 12063390540 | 213535704 | Harry Potter and the Philsopher's Stone                 | abcd        | Fiction         |
+| 12345678901 | 213535704 | Applied Mathematics-I                                   | abcd        | Mathematics     |
+| 14974539935 | 213535704 | Steve Jobs                                              | abcd        | Non-Fiction     |
+| 18533792071 | 213535704 | Harry Potter and the Chamber of Secrets                 | abcd        | Fiction         |
+| 20585409442 | 213535704 | Wonder                                                  | abcd        | Fiction         |
+| 22096364365 | 213535704 | The Adventures of Tom Sawyer                            | abcd        | Literature      |
+| 23945493696 | 213535704 | Wool                                                    | abcd        | Fiction         |
+| 25974233867 | 213535704 | HEAD FIRST JAVA                                         | abcd        | Programming     |
+| 27260506091 | 213535704 | Outlander                                               | abcd        | Fiction         |
+| 27931229109 | 213535704 | Fundamentals of Database Systems                        | abcd        | Programming     |
+| 30774107178 | 213535704 | ÿCatch-22                                               | abcd        | Literature      |
+| 30920288291 | 213535704 | The Hitchhiker's Guide to the Galaxy                    | abcd        | Science Fiction |
+| 33226486961 | 213535704 | Neural Network Design                                   | abcd        | Programming     |
+| 35270756718 | 213535704 | Dune                                                    | abcd        | Science Fiction |
+| 38425519962 | 213535704 | Foundation                                              | abcd        | Science Fiction |
+| 49163453748 | 213535704 | Frankenstein                                            | abcd        | Science Fiction |
+| 50243324191 | 213535704 | The book Thief                                          | abcd        | Fiction         |
+| 50680991225 | 213535704 | How to Win Friends and Influence People                 | abcd        | Non-Fiction     |
+| 51895206346 | 213535704 | Sapiens: A Brief History of Humankind                   | abcd        | Non-Fiction     |
+| 52164525743 | 213535704 | ÿOne Hundred Years of Solitude                          | abcd        | Literature      |
+| 56118942707 | 213535704 | ÿCLEAN CODE: A HANDBOOK OF AGILE SOFTWARE CRAFTSMANSHIP | abcd        | Programming     |
+| 61595403446 | 213535704 | When Breath Becomes Air                                 | abcd        | Non-Fiction     |
+| 67047678276 | 213535704 | The Great Gatsby                                        | abcd        | Literature      |
+| 68027409809 | 213535704 | A Brief History of Time                                 | abcd        | Non-Fiction     |
+| 69493902479 | 213535704 | ÿUlysses                                                | abcd        | Literature      |
+| 75645730061 | 213535704 | Surely You?re Joking, Mr. Feynman!                      | abcd        | Non-Fiction     |
+| 76660995554 | 213535704 | The Illaid                                              | abcd        | Literature      |
+| 77012553153 | 213535704 | Manual for Living                                       | abcd        | Non-Fiction     |
+| 77418583213 | 213535704 | INTRODUCTION TO ALGORITHMS                              | abcd        | Programming     |
+| 77614910635 | 213535704 | Jurassic Park                                           | abcd        | Science Fiction |
+| 82608175688 | 213535704 | Don Quixote                                             | abcd        | Literature      |
+| 85269652460 | 213535704 | Solaris                                                 | abcd        | Science Fiction |
+| 87927505544 | 213535704 | Mamba Mentality                                         | abcd        | Non-Fiction     |
+| 90069909161 | 213535704 | The Tale of two Cities                                  | abcd        | Literature      |
+| 91820234170 | 213535704 | WORKING EFFECTIVELY WITH LEGACY CODE                    | abcd        | Programming     |
+| 96385274102 | 213535704 | Life of Pi                                              | 1111        | Fiction         |
+| 97743045345 | 213535704 | Treasure Island                                         | abcd        | Literature      |
+| 98765432101 | 213535704 | Reinforcement Learning                                  | abcd        | Programming     |
++-------------+-----------+---------------------------------------------------------+-------------+-----------------+
+39 rows in set (0.001 sec)
+
+MariaDB [library]> SELECT "Books Table" as Title; SELECT * FROM BOOKS;
++-------------+
+| Title       |
++-------------+
+| Books Table |
++-------------+
+1 row in set (0.000 sec)
+
++-------------+---------+---------+-----------------+--------------------------------------------------------+----------+------------------------+
+| ISBN        | BOOK_ID | EDITION | SUBJECT_AREA    | TITLE                                                  | LENDABLE | AUTHOR                 |
++-------------+---------+---------+-----------------+--------------------------------------------------------+----------+------------------------+
+| 12345678901 |       1 |       3 | Mathematics     | Applied Mathematics-I                                  |        0 | G.Khumbhojkar          |
+| 98765432101 |       2 |       5 | Programming     | Reinforcement Learning                                 |        0 | Richard S Sutton       |
+| 30920288291 |       3 |       5 | Science Fiction | The Hitchhiker's Guide to the Galaxy                   |        1 | Douglas Adams          |
+| 14974539935 |       4 |       3 | Non-Fiction     | Steve Jobs                                             |        1 | Walter Issacson        |
+| 90069909161 |       5 |       4 | Literature      | The Tale of two Cities                                 |        1 | Charles Dickens        |
+| 10998213313 |       6 |       3 | Non-Fiction     | The Dairy of a Young Girl                              |        1 | Anne Frank             |
+| 27931229109 |       7 |       2 | Programming     | Fundamentals of Database Systems                       |        1 | Ramez Elmasri          |
+| 12063390540 |       8 |       4 | Fiction         | Harry Potter and the Philsopher's Stone                |        0 | J.K Rowling            |
+| 50680991225 |       9 |       2 | Non-Fiction     | How to Win Friends and Influence People                |        0 | Dale Carnegie          |
+| 97743045345 |      10 |       3 | Literature      | Treasure Island                                        |        0 | Robert Louis Stevenson |
+| 18533792071 |      11 |       4 | Fiction         | Harry Potter and the Chamber of Secrets                |        0 | J.K Rowling            |
+| 87927505544 |      12 |       3 | Non-Fiction     | Mamba Mentality                                        |        0 | Kobe Bryant            |
+| 33226486961 |      13 |       3 | Programming     | Neural Network Design                                  |        0 | Hagan                  |
+| 22096364365 |      14 |       4 | Literature      | The Adventures of Tom Sawyer                           |        1 | Mark Twain             |
+| 35270756718 |      15 |       3 | Science Fiction | Dune                                                   |        0 | Frank Herbert          |
+| 12345678901 |      16 |     234 | 235sdgfsdg      | sdgsdg                                                 |        1 | sfdghdfbh              |
+| 96385274102 |      17 |       3 | Fiction         | Life of Pi                                             |        1 | Pi                     |
+| 69493902479 |      20 |       1 | Literature      | Ulysses                                                |        1 | James Joyce            |
+| 77614910635 |      21 |       4 | Science Fiction | Jurassic Park                                          |        1 | Michael Chrichton      |
+| 23945493696 |      22 |       4 | Fiction         | Wool                                                   |        1 | Hugh Howey             |
+| 49163453748 |      23 |       1 | Science Fiction | Frankenstein                                           |        1 | Mary Shelley           |
+| 76660995554 |      24 |       3 | Literature      | The Illaid                                             |        0 | Homer                  |
+| 38425519962 |      25 |       1 | Science Fiction | Foundation                                             |        0 | Isaac Asimov           |
+| 82608175688 |      26 |       4 | Literature      | Don Quixote                                            |        1 | Miguel de Cervantes    |
+| 67047678276 |      27 |       3 | Literature      | The Great Gatsby                                       |        0 | F. Scott Fitzgerald    |
+| 61595403446 |      28 |       1 | Non-Fiction     | When Breath Becomes Air                                |        0 | Paul Kalanithi         |
+| 56118942707 |      29 |       2 | Programming     | CLEAN CODE: A HANDBOOK OF AGILE SOFTWARE CRAFTSMANSHIP |        0 | Robert C. Martin       |
+| 68027409809 |      30 |       2 | Non-Fiction     | A Brief History of Time                                |        1 | Stephen Hawking        |
+| 30774107178 |      31 |       3 | Literature      | Catch-22                                               |        1 | Joseph Heller          |
+| 51895206346 |      32 |       3 | Non-Fiction     | Sapiens: A Brief History of Humankind                  |        0 | Yuval Noah Harari      |
+| 75645730061 |      33 |       1 | Non-Fiction     | Surely You?re Joking, Mr. Feynman!                     |        0 | Richard P. Feynman     |
+| 77418583213 |      34 |       1 | Programming     | INTRODUCTION TO ALGORITHMS                             |        0 | Thomas H. Cormen       |
+| 52164525743 |      35 |       2 | Literature      | One Hundred Years of Solitude                          |        1 | Gabriel Garcia Marquez |
+| 27260506091 |      36 |       4 | Fiction         | Outlander                                              |        0 | Diana Gabaldon         |
+| 20585409442 |      37 |       2 | Fiction         | Wonder                                                 |        0 | R. J. Palacio          |
+| 91820234170 |      38 |       4 | Programming     | WORKING EFFECTIVELY WITH LEGACY CODE                   |        0 | Michael Feathers       |
+| 77012553153 |      39 |       1 | Non-Fiction     | Manual for Living                                      |        0 | Epictetus              |
+| 25974233867 |      40 |       3 | Programming     | HEAD FIRST JAVA                                        |        0 | Kathy Sierra           |
+| 85269652460 |      41 |       4 | Science Fiction | Solaris                                                |        1 | Stanislaw Lem          |
++-------------+---------+---------+-----------------+--------------------------------------------------------+----------+------------------------+
+39 rows in set (0.001 sec)
+
+MariaDB [library]> SELECT "Borrows Table" as Title; SELECT * FROM BORROWS;
++---------------+
+| Title         |
++---------------+
+| Borrows Table |
++---------------+
+1 row in set (0.000 sec)
+
++-------------+---------+-----------+------------+--------------+-------------------------+---------------+
+| ISBN        | BOOK_ID | SSN       | ISSUE_DATE | GRACE_PERIOD | OVERDUE_STATUS          | RETURN_STATUS |
++-------------+---------+-----------+------------+--------------+-------------------------+---------------+
+| 30920288291 |       3 | 411726343 | 2018-01-20 | 2018-02-17   | Your Return is overdue! |             0 |
+| 14974539935 |       4 | 966826841 | 2018-01-12 | 2018-04-26   | Your Return is overdue! |             0 |
+| 90069909161 |       5 | 351475268 | 2018-03-26 | 2018-04-23   | Your Return is overdue! |             0 |
+| 10998213313 |       6 | 860693966 | 2018-04-26 | 2018-05-24   | Your Return is overdue! |             0 |
+| 27931229109 |       7 | 381596986 | 2018-09-02 | 2018-09-30   | Your Return is overdue! |             0 |
+| 22096364365 |      14 | 527295112 | 2020-05-03 | 2020-05-31   |                         |             1 |
+| 87927505544 |      12 | 527295112 | 2020-05-03 | 2020-05-31   |                         |             0 |
+| 23945493696 |      22 | 905360861 | 2018-01-10 | 2018-02-07   | NULL                    |             0 |
++-------------+---------+-----------+------------+--------------+-------------------------+---------------+
+8 rows in set (0.001 sec)
+
+MariaDB [library]> SELECT "Returns Table" as Title; SELECT * FROM RETURNS;
++---------------+
+| Title         |
++---------------+
+| Returns Table |
++---------------+
+1 row in set (0.000 sec)
+
++-----------+-------------+---------+-----------+-------------+
+| Recipt_no | ISBN        | BOOK_ID | SSN       | Return_date |
++-----------+-------------+---------+-----------+-------------+
+|         1 | 30920288291 |       3 | 411726343 | 2018-02-10  |
+|         2 | 14974539935 |       4 | 966826841 | 2018-03-12  |
+|         3 | 90069909161 |       5 | 351475268 | 2018-04-12  |
+|         4 | 10998213313 |       6 | 860693966 | 2018-05-20  |
+|         5 | 27931229109 |       7 | 381596986 | 2018-09-28  |
+|        17 | 14974539935 |       4 | 966826841 | 2020-05-03  |
+|        18 | 22096364365 |      14 | 527295112 | 2020-05-03  |
+|        19 | 22096364365 |      14 | 527295112 | 2020-05-03  |
+|        20 | 23945493696 |      22 | 905360861 | 2018-01-30  |
++-----------+-------------+---------+-----------+-------------+
+9 rows in set (0.000 sec)
+
+MariaDB [library]> notee

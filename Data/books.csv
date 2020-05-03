@@ -1,16 +1,40 @@
-﻿ISBN,BOOK_ID,EDITION,SUBJECT_AREA,TITLE,LENDABLE,AUTHOR
-12345678901,1,3,Mathematics,Applied Mathematics-I,1,G.Khumbhojkar
-98765432101,2,5,Programming,Reinforcement Learning,0,Richard S Sutton
-30920288291,3,5,Science Fiction,The Hitchhiker's Guide to the Galaxy,1,Douglas Adams
-14974539935,4,3,Non-Fiction,Steve Jobs,0,Walter Issacson
-90069909161,5,4,Literature,The Tale of two Cities,1,Charles Dickens
-10998213313,6,3,Non-Fiction,The Dairy of a Young Girl,1,Anne Frank
-27931229109,7,2,Programming,Fundamentals of Database Systems,1,Ramez Elmasri
-12063390540,8,4,Fiction,Harry Potter and the Philsopher's Stone,1,J.K Rowling
-50680991225,9,2,Non-Fiction,How to Win Friends and Influence People,0,Dale Carnegie
-97743045345,10,3,Literature,Treasure Island,0,Robert Louis Stevenson
-18533792071,11,4,Fiction,Harry Potter and the Chamber of Secrets,0,J.K Rowling
-87927505544,12,3,Non-Fiction,Mamba Mentality,1,Kobe Bryant
-33226486961,13,3,Programming,Neural Network Design,0,Hagan
-22096364365,14,4,Literature,The Adventures of Tom Sawyer,1,Mark Twain
-35270756718,15,3,Science Fiction,Dune,0,Frank Herbert
+"ISBN","BOOK_ID","EDITION","SUBJECT_AREA","TITLE","LENDABLE","AUTHOR"
+"12345678901","1","3","Mathematics","Applied Mathematics-I","0","G.Khumbhojkar"
+"98765432101","2","5","Programming","Reinforcement Learning","0","Richard S Sutton"
+"30920288291","3","5","Science Fiction","The Hitchhiker's Guide to the Galaxy","1","Douglas Adams"
+"14974539935","4","3","Non-Fiction","Steve Jobs","1","Walter Issacson"
+"90069909161","5","4","Literature","The Tale of two Cities","1","Charles Dickens"
+"10998213313","6","3","Non-Fiction","The Dairy of a Young Girl","1","Anne Frank"
+"27931229109","7","2","Programming","Fundamentals of Database Systems","1","Ramez Elmasri"
+"12063390540","8","4","Fiction","Harry Potter and the Philsopher's Stone","0","J.K Rowling"
+"50680991225","9","2","Non-Fiction","How to Win Friends and Influence People","0","Dale Carnegie"
+"97743045345","10","3","Literature","Treasure Island","0","Robert Louis Stevenson"
+"18533792071","11","4","Fiction","Harry Potter and the Chamber of Secrets","0","J.K Rowling"
+"87927505544","12","3","Non-Fiction","Mamba Mentality","0","Kobe Bryant"
+"33226486961","13","3","Programming","Neural Network Design","0","Hagan"
+"22096364365","14","4","Literature","The Adventures of Tom Sawyer","1","Mark Twain"
+"35270756718","15","3","Science Fiction","Dune","0","Frank Herbert"
+"12345678901","16","234","235sdgfsdg","sdgsdg","1","sfdghdfbh"
+"96385274102","17","3","Fiction","Life of Pi","1","Pi"
+"69493902479","20","1","Literature","Ulysses","1","James Joyce"
+"77614910635","21","4","Science Fiction","Jurassic Park","1","Michael Chrichton"
+"23945493696","22","4","Fiction","Wool","1","Hugh Howey"
+"49163453748","23","1","Science Fiction","Frankenstein","1","Mary Shelley"
+"76660995554","24","3","Literature","The Illaid","0","Homer"
+"38425519962","25","1","Science Fiction","Foundation","0","Isaac Asimov"
+"82608175688","26","4","Literature","Don Quixote","1","Miguel de Cervantes"
+"67047678276","27","3","Literature","The Great Gatsby","0","F. Scott Fitzgerald"
+"61595403446","28","1","Non-Fiction","When Breath Becomes Air","0","Paul Kalanithi"
+"56118942707","29","2","Programming","CLEAN CODE: A HANDBOOK OF AGILE SOFTWARE CRAFTSMANSHIP","0","Robert C. Martin"
+"68027409809","30","2","Non-Fiction","A Brief History of Time","1","Stephen Hawking"
+"30774107178","31","3","Literature","Catch-22","1","Joseph Heller"
+"51895206346","32","3","Non-Fiction","Sapiens: A Brief History of Humankind","0","Yuval Noah Harari"
+"75645730061","33","1","Non-Fiction","Surely You’re Joking, Mr. Feynman!","0","Richard P. Feynman"
+"77418583213","34","1","Programming","INTRODUCTION TO ALGORITHMS","0","Thomas H. Cormen"
+"52164525743","35","2","Literature","One Hundred Years of Solitude","1","Gabriel Garcia Marquez"
+"27260506091","36","4","Fiction","Outlander","0","Diana Gabaldon"
+"20585409442","37","2","Fiction","Wonder","0","R. J. Palacio"
+"91820234170","38","4","Programming","WORKING EFFECTIVELY WITH LEGACY CODE","0","Michael Feathers"
+"77012553153","39","1","Non-Fiction","Manual for Living","0","Epictetus"
+"25974233867","40","3","Programming","HEAD FIRST JAVA","0","Kathy Sierra"
+"85269652460","41","4","Science Fiction","Solaris","1","Stanislaw Lem"
