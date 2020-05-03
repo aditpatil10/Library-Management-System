@@ -21,7 +21,6 @@ $db = mysqli_connect('localhost', 'root', '', 'Library');
     <title>Home</title>
     <style>
       body {
-        background-image: url(imgs/bg.jpg);
       }
     </style>
   </head>
@@ -48,5 +47,43 @@ $db = mysqli_connect('localhost', 'root', '', 'Library');
         Borrowed
       </h1>
     </div>
+    <a href="borrowedform.php" class="btn btn-dark" role="button">Add new Entry</a>
+
+<div>
+<table class="table table-dark">
+<thead>
+<tr>
+  <th scope="col">ISBN</th>
+  <th scope="col">BOOK ID</th>
+  <th scope="col">SSN</th>
+  <th scope="col">ISSUE DATE</th>
+  <th scope="col">GRACE_PERIOD</th>
+</tr>
+</thead>
+<?php 
+
+// connect to database
+  $conn = mysqli_connect('localhost', 'root', '', 'Library');
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    }
+  $sql = "SELECT ISBN, BOOK_ID, SSN, ISSUE_DATE, GRACE_PERIOD FROM `borrows`";
+  
+  $result = $conn->query($sql);
+if ($result->num_rows > 0) {
+// output data of each row
+while($row = $result->fetch_assoc()) {
+echo "<tr><td>" . $row["ISBN"]. "</td><td>" . $row["BOOK_ID"] . "</td><td>"
+. $row["SSN"]. "</td><td>" . $row["ISSUE_DATE"] . "</td><td>" . $row["GRACE_PERIOD"] . "</td></tr>";
+}
+echo "</table>";
+} else { echo "0 results"; }
+$conn->close();
+?>    
+  
+
+</div>
+
+</div>
   </body>
 </html>

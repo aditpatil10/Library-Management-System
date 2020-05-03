@@ -1,8 +1,11 @@
-<?php 
+<?php
+$conn = mysqli_connect('localhost', 'root', '', 'Library');
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+  }
 
-// connect to database
-$db = mysqli_connect('localhost', 'root', '', 'Library');
-
+  $query1 = "SELECT * FROM `members`";
+  $result2 = mysqli_query($conn, $query1); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,9 +22,10 @@ $db = mysqli_connect('localhost', 'root', '', 'Library');
     />
 
     <title>Home</title>
+    
     <style>
-      body {
-        background-image: url(imgs/bg.jpg);
+      .ad {
+        font-size: large;
       }
     </style>
   </head>
@@ -47,6 +51,23 @@ $db = mysqli_connect('localhost', 'root', '', 'Library');
       >
         Renew Membership
       </h1>
+      <form form action="renewupdate.php" method="post" id="renew">
+<div class=" ad">
+<label for="ISBN" class="ad">Book Name</label>
+<select id="ref" name="ssn" form="renew">
+
+            <?php while($row1 = mysqli_fetch_array($result2)):;?>
+
+            <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?> <?php echo $row1[3];?></option>
+
+            <?php endwhile;?>
+
+        </select>
+  </div>
+  
+  <input type="submit" class="btn btn-primary ad" name="submit" value="Renew">
+</form>
+
     </div>
   </body>
 </html>
